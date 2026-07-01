@@ -60,6 +60,11 @@ html {
   .cards {
     order: 2;
     color: var(--text);
+    .card {
+      &:not(.active) {
+        display: none;
+      }
+    }
     figure {
       img {
         width: 100%;
