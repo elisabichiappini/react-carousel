@@ -1,3 +1,4 @@
+import Carousel from './components/Carousel';
 import './App.scss'
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
   return (
     <>
     <div>Benvenuti</div>
+    <Carousel />
     </>
   )
 }
