@@ -17,7 +17,7 @@ export default function CarouselStyle() {
 
         <div className="carousel">
             <div class="cards-wrapper">
-                <div className="cards">
+                <div className="cards" style={{     marginLeft: `calc(-${currentIndex * 640}px + 1rem + 20px)` }}>
                     {
                         posts.map((post, index) => (
                             <div key={`card-${index}`} className={`card ${index === currentIndex ? 'active' : ''}`}>
