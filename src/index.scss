@@ -13,12 +13,14 @@ html {
 }
 
 .carousel {
+  margin: 0 auto;
   max-width: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
 
   .card {
+    order:2;
     figure {
       img {
         width: 100%;
@@ -34,6 +36,15 @@ html {
       font-weight: 800;
       color: var(--text-h);
       text-align: center;
+    }
+  }
+
+  .arrow {
+    &.left {
+      order: 1;
+    }
+    &.right {
+      order: 3;
     }
   }
 }
