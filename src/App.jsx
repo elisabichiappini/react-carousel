@@ -1,4 +1,4 @@
-import Carousel from './components/Carousel';
+import CarouselStyle from './components/CarouselStyle';
 import './App.scss'
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
   return (
     <>
    <h1 className="title">React Carousel</h1>
-    <Carousel />
+    <CarouselStyle />
     </>
   )
 }

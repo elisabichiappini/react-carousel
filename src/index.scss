@@ -34,7 +34,30 @@ html {
   align-items: center;
   justify-content: center;
 
-  .card {
+  // .card {
+  //   order: 2;
+  //   color: var(--text);
+  //   figure {
+  //     img {
+  //       width: 100%;
+  //       display: block;
+  //       height: auto;
+  //       border-radius: 8px;
+  //     }
+  //   }
+
+  //   p {
+  //     color: var(--text);
+  //     margin-top: 8px;
+  //     font-size: 16px;
+  //     font-weight: 800;
+   
+  //     text-align: center;
+  //   }
+  // }
+
+
+  .cards {
     order: 2;
     color: var(--text);
     figure {
