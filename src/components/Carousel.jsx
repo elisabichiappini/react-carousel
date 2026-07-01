@@ -8,6 +8,9 @@ export default function Carousel(){
       const [currentIndex, setCurrentIndex] = useState(2);
       const currentPost = posts[currentIndex];
 
+      const goToNext = () => setCurrentIndex(c => (c + 1) % posts.length);
+      const goToPrev = () => setCurrentIndex(c => (c - 1 + posts.length) % posts.length);
+
     return (
       
 
@@ -18,8 +21,8 @@ export default function Carousel(){
                 </figure>
                 <p >{currentPost.title}</p>
             </div>
-            <button className="arrow left"><LeftArrow /></button>
-            <button className="arrow right"><RightArrow /></button>
+            <button className="arrow left" onClick={goToPrev}><LeftArrow /></button>
+            <button className="arrow right" onClick={goToNext}><RightArrow /></button>
         </div>
 
     )

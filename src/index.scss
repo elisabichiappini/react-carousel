@@ -22,6 +22,7 @@ html {
   font-size: 32px;
   color: var(--text-h);
   text-align: center;
+  padding-bottom: 24px;
 }
 
 
@@ -56,6 +57,7 @@ html {
   }
 
   .arrow {
+    margin: 8px;
     &.left {
       order: 1;
     }
