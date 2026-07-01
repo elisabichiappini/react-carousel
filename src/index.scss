@@ -29,47 +29,23 @@ html {
 .carousel {
   color: var(--text);
   margin: 0 auto;
-  max-width: 400px;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
 
-  // .card {
-  //   order: 2;
-  //   color: var(--text);
-  //   figure {
-  //     img {
-  //       width: 100%;
-  //       display: block;
-  //       height: auto;
-  //       border-radius: 8px;
-  //     }
-  //   }
-
-  //   p {
-  //     color: var(--text);
-  //     margin-top: 8px;
-  //     font-size: 16px;
-  //     font-weight: 800;
-   
-  //     text-align: center;
-  //   }
-  // }
-
-
-  .cards {
+  .card {
     order: 2;
-    color: var(--text);
-    .card {
-      &:not(.active) {
-        display: none;
-      }
-    }
+
     figure {
+      height: 480px;
+
       img {
         width: 100%;
         display: block;
-        height: auto;
+        height: 100%;
+        object-fit: cover;
         border-radius: 8px;
       }
     }
@@ -79,13 +55,34 @@ html {
       margin-top: 8px;
       font-size: 16px;
       font-weight: 800;
-   
       text-align: center;
+    }
+
+  }
+
+  .cards-wrapper {
+    order: 2;
+    max-width: 640px;
+  
+    .cards {
+      display: flex;
+      width: calc(640px * 3);
+      flex-shrink: 0;
+
+      .card {
+        &:not(.active) {
+          opacity: 0.5;
+        }
+      }
     }
   }
 
   .arrow {
     margin: 8px;
+    position: static;
+    z-index: 1; 
+    font-size: 16px;
+
     &.left {
       order: 1;
     }

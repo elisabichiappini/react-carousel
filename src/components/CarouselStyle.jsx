@@ -16,17 +16,19 @@ export default function CarouselStyle() {
 
 
         <div className="carousel">
-            <div className="cards">
-                {
-                    posts.map((post, index) => (
-                        <div key={`card-${index}`} className={`card ${index === currentIndex ? 'active' : ''}`}>
-                            <figure>
-                                <img src={post.img} alt={post.title} />
-                            </figure>
-                            <p>{post.title}</p>
-                        </div>
-                    ))
-                }
+            <div class="cards-wrapper">
+                <div className="cards">
+                    {
+                        posts.map((post, index) => (
+                            <div key={`card-${index}`} className={`card ${index === currentIndex ? 'active' : ''}`}>
+                                <figure>
+                                    <img src={post.img} alt={post.title} />
+                                </figure>
+                                <p>{post.title}</p>
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
             <button className="arrow left" onClick={goToPrev}><LeftArrow /></button>
             <button className="arrow right" onClick={goToNext}><RightArrow /></button>
