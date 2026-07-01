@@ -16,10 +16,10 @@ export default function Carousel(){
                 <figure>
                     <img src={currentPost.img} alt={currentPost.title} />
                 </figure>
-                <p>{currentPost.title}</p>
+                <p >{currentPost.title}</p>
             </div>
-            <div className="arrow left"><LeftArrow /></div>
-            <div className="arrow right"><RightArrow /></div>
+            <button className="arrow left"><LeftArrow /></button>
+            <button className="arrow right"><RightArrow /></button>
         </div>
 
     )

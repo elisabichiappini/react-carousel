@@ -1,5 +1,7 @@
 :root {
   font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --text-h: #34a2a2;
+  --text: #210303;
 }
 
 * {
@@ -8,11 +10,23 @@
   padding: 0;
 }
 
+button {
+  all: unset;
+}
+
 html {
   padding: 1rem;
 }
 
+.title {
+  font-size: 32px;
+  color: var(--text-h);
+  text-align: center;
+}
+
+
 .carousel {
+  color: var(--text);
   margin: 0 auto;
   max-width: 400px;
   display: flex;
@@ -20,7 +34,8 @@ html {
   justify-content: center;
 
   .card {
-    order:2;
+    order: 2;
+    color: var(--text);
     figure {
       img {
         width: 100%;
@@ -31,10 +46,11 @@ html {
     }
 
     p {
+      color: var(--text);
       margin-top: 8px;
       font-size: 16px;
       font-weight: 800;
-      color: var(--text-h);
+   
       text-align: center;
     }
   }
@@ -43,6 +59,7 @@ html {
     &.left {
       order: 1;
     }
+
     &.right {
       order: 3;
     }

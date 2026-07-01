@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-    <div>Benvenuti</div>
+   <h1 className="title">React Carousel</h1>
     <Carousel />
     </>
   )
