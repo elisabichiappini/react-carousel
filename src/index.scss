@@ -26,7 +26,7 @@ html {
 }
 
 
-.carousel {
+.carousel-wrapper {
   color: var(--text);
   margin: 0 auto;
   overflow: hidden;
@@ -34,7 +34,53 @@ html {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  position: relative;
 
+.carousel{
+
+
+  .cards-wrapper {
+    order: 2;
+    max-width: 640px;
+
+    .cards {
+      display: flex;
+      width: calc(640px * 3);
+      flex-shrink: 0;
+      transition: margin 0.5s ease-in-out;
+
+      .card {
+        transition: opacity .3s;
+
+        &:not(.active) {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  .arrow {
+    margin: 8px;
+    position: static;
+    z-index: 1;
+    font-size: 16px;
+    width: 50px;
+
+
+    &.left {
+      order: 1;
+    }
+
+    &.right {
+      order: 3;
+    }
+  }
+
+}
+  .bullets {
+    display: flex;
+    justify-content: center;
+  }
   .card {
     order: 2;
 
@@ -58,41 +104,5 @@ html {
       text-align: center;
     }
 
-  }
-
-  .cards-wrapper {
-    order: 2;
-    max-width: 640px;
-
-    .cards {
-      display: flex;
-      width: calc(640px * 3);
-      flex-shrink: 0;
-      transition: margin 0.5s ease-in-out;
-
-      .card {
-        transition: opacity .3s;
-        &:not(.active) {
-          opacity: 0.5;
-        }
-      }
-    }
-  }
-
-  .arrow {
-    margin: 8px;
-    position: static;
-    z-index: 1;
-    font-size: 16px;
-    width: 50px;
-
-
-    &.left {
-      order: 1;
-    }
-
-    &.right {
-      order: 3;
-    }
   }
 }
