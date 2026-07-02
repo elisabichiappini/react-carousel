@@ -33,6 +33,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 
   position: relative;
 
@@ -45,7 +46,6 @@ html {
       display: flex;
 
       .cards {
-
         display: flex;
         transition: transform .5s ease;
 
@@ -77,23 +77,17 @@ html {
             font-weight: 800;
             text-align: center;
           }
-
         }
       }
 
     }
 
     .arrow {
-
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-
-
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
       z-index: 1;
-      font-size: 16px;
-   
-
+      font-size: 20px;
 
       &.left {
         order: 1;
@@ -111,5 +105,4 @@ html {
       justify-content: center;
     }
   }
-
 }
