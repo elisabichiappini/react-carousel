@@ -16,8 +16,8 @@ export default function CarouselStyle() {
 
         <div className="carousel-wrapper">
             <div className="carousel">
-                <div class="cards-wrapper">
-                    <div className="cards" style={{ marginLeft: `calc(-${currentIndex * 640}px + 1rem + 20px)` }}>
+                <div className="cards-wrapper">
+                    <div className="cards" style={{ transform: `translateX(-${currentIndex * 640}px)` }}>
                         {
                             posts.map((post, index) => (
                                 <div key={`card-${index}`} className={`card ${index === currentIndex ? 'active' : ''}`}>
@@ -30,8 +30,11 @@ export default function CarouselStyle() {
                         }
                     </div>
                 </div>
+
                 <button className="arrow left" onClick={goToPrev}><LeftArrow /></button>
                 <button className="arrow right" onClick={goToNext}><RightArrow /></button>
+
+
             </div>
             <div className="bullets">
                 ciao
