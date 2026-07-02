@@ -7,7 +7,8 @@ import {
 
 export default function CarouselStyle() {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const currentPost = posts[currentIndex];
+    // const currentPost = posts[currentIndex];
+    
 
     const goToNext = () => setCurrentIndex(c => (c + 1) % posts.length);
     const goToPrev = () => setCurrentIndex(c => (c - 1 + posts.length) % posts.length);

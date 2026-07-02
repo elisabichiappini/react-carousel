@@ -38,7 +38,7 @@ html {
   position: relative;
 
   .carousel {
-    max-width: 640px;
+    width: 640px;
     position: relative;
 
     .cards-wrapper {
@@ -99,10 +99,9 @@ html {
         right: 0;
       }
     }
-
-    .bullets {
+  }
+   .bullets {
       display: flex;
       justify-content: center;
     }
-  }
 }
