@@ -38,15 +38,16 @@ html {
 
   .carousel {
     max-width: 640px;
+    position: relative;
 
     .cards-wrapper {
       order: 2;
-      
+      display: flex;
 
       .cards {
 
-        display:flex;
-    transition: transform .5s ease;
+        display: flex;
+        transition: transform .5s ease;
 
         .card {
           transition: opacity .3s;
@@ -80,21 +81,28 @@ html {
         }
       }
 
-      .arrow {
-        margin: 8px;
-        position: static;
-        z-index: 1;
-        font-size: 16px;
-        width: 50px;
+    }
+
+    .arrow {
+
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
 
 
-        &.left {
-          order: 1;
-        }
+      z-index: 1;
+      font-size: 16px;
+   
 
-        &.right {
-          order: 3;
-        }
+
+      &.left {
+        order: 1;
+        left: 0;
+      }
+
+      &.right {
+        order: 3;
+        right: 0;
       }
     }
 
