@@ -36,73 +36,70 @@ html {
   gap: 1rem;
   position: relative;
 
-.carousel{
+  .carousel {
 
+    .cards-wrapper {
+      order: 2;
+      max-width: 640px;
 
-  .cards-wrapper {
-    order: 2;
-    max-width: 640px;
+      .cards {
+        display: flex;
+        width: calc(640px * 3);
+        flex-shrink: 0;
+        transition: margin 0.5s ease-in-out;
 
-    .cards {
-      display: flex;
-      width: calc(640px * 3);
-      flex-shrink: 0;
-      transition: margin 0.5s ease-in-out;
+        .card {
+          transition: opacity .3s;
+          order: 2;
 
-      .card {
-        transition: opacity .3s;
+          &:not(.active) {
+            opacity: 0.5;
+          }
 
-        &:not(.active) {
-          opacity: 0.5;
+          figure {
+            height: 480px;
+
+            img {
+              width: 100%;
+              display: block;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 8px;
+            }
+          }
+
+          p {
+            color: var(--text);
+            margin-top: 8px;
+            font-size: 16px;
+            font-weight: 800;
+            text-align: center;
+          }
+
         }
       }
     }
+
+    .arrow {
+      margin: 8px;
+      position: static;
+      z-index: 1;
+      font-size: 16px;
+      width: 50px;
+
+
+      &.left {
+        order: 1;
+      }
+
+      &.right {
+        order: 3;
+      }
+    }
   }
 
-  .arrow {
-    margin: 8px;
-    position: static;
-    z-index: 1;
-    font-size: 16px;
-    width: 50px;
-
-
-    &.left {
-      order: 1;
-    }
-
-    &.right {
-      order: 3;
-    }
-  }
-
-}
   .bullets {
     display: flex;
     justify-content: center;
-  }
-  .card {
-    order: 2;
-
-    figure {
-      height: 480px;
-
-      img {
-        width: 100%;
-        display: block;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 8px;
-      }
-    }
-
-    p {
-      color: var(--text);
-      margin-top: 8px;
-      font-size: 16px;
-      font-weight: 800;
-      text-align: center;
-    }
-
   }
 }
