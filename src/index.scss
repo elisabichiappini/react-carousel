@@ -42,7 +42,7 @@ html {
     position: relative;
 
     .cards-wrapper {
-      order: 2;
+
       display: flex;
 
       .cards {
@@ -51,7 +51,7 @@ html {
 
         .card {
           transition: opacity .3s;
-          order: 2;
+  
           min-width: 640px;
 
           &:not(.active) {
@@ -90,12 +90,12 @@ html {
       font-size: 20px;
 
       &.left {
-        order: 1;
+
         left: 0;
       }
 
       &.right {
-        order: 3;
+    
         right: 0;
       }
     }
