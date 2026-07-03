@@ -41,7 +41,7 @@ export default function CarouselStyle() {
             <div className="bullets">
                 {
                     posts.map((_, index) => (
-                        <span key={`bullet-${index}`} className={`bullet ${index === currentIndex ? 'active' : ''}`} onClick={() => setCurrentIndex(index)}> © </span>
+                        <span key={`bullet-${index}`} className={`bullet ${index === currentIndex ? 'active' : ''}`} onClick={() => setCurrentIndex(index)}></span>
                     ))
                 }
             </div>

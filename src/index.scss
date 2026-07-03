@@ -1,7 +1,7 @@
 :root {
   font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --text-h: #34a2a2;
-  --text: #210303;
+  --text-h: #cbdbdb;
+  --text: #ffc6c6;
 }
 
 * {
@@ -16,6 +16,7 @@ button {
 
 html {
   padding: 1rem;
+    background: linear-gradient(to right, #4d5252, #151515);
 }
 
 .title {
@@ -23,6 +24,7 @@ html {
   color: var(--text-h);
   text-align: center;
   padding-bottom: 24px;
+
 }
 
 
@@ -51,7 +53,7 @@ html {
 
         .card {
           transition: opacity .3s;
-  
+
           min-width: 640px;
 
           &:not(.active) {
@@ -88,6 +90,10 @@ html {
       transform: translateY(-50%);
       z-index: 1;
       font-size: 20px;
+      line-height: 20px;
+      color: var(--text-h);
+      background-color: rgba(0, 0, 0, 0.5);
+    
 
       &.left {
 
@@ -95,13 +101,29 @@ html {
       }
 
       &.right {
-    
+
         right: 0;
       }
     }
   }
-   .bullets {
-      display: flex;
-      justify-content: center;
+
+  .bullets {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    .bullet {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      padding-top: 8px;
+      border: 1px solid var(--text-h);
+    
+
+      &.active {
+        background-color: var(--text-h);
+      }
+
     }
+  }
 }
