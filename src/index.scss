@@ -109,6 +109,7 @@ html {
 
   .bullets {
     display: flex;
+    margin-top: 16px;
     justify-content: center;
     gap: 8px;
 
@@ -117,7 +118,7 @@ html {
       height: 10px;
       border-radius: 50%;
       padding-top: 8px;
-      border: 1px solid var(--text-h);
+      border: .5px solid var(--text-h);
     
 
       &.active {
