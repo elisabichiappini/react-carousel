@@ -1,25 +1,29 @@
 import { useState } from "react";
 export default function Form() {
-    const [ingrediants, setIngrediants] = useState([]);
-    const [ingrediantName, setIngrediantName] = useState("");
+    const [ingredients, setingredients] = useState([]);
+    const [ingredientName, setingredientName] = useState("");
 
     const handelSubmit = (e) => {
         e.preventDefault();
-        setIngrediants( array => {
+        setingredients( array => {
             const copiaArray= [...array];
-            copiaArray.push(ingrediantName);
+            copiaArray.push(ingredientName);
             return copiaArray;
         });
-        setIngrediantName("");
+        setingredientName("");
+    };
+
+    const removeIngredient = (indexDaEliminare) => {
+        setingredients(array => array.filter((_, i) => i !== indexDaEliminare));
     }
 
     return (
         <form className="form-element" onSubmit={handelSubmit}>
             Inserisci ingrediente:
             <input 
-                type="text" 
-                value={ingrediantName} 
-                onChange={(e) => setIngrediantName(e.target.value)} />
+                type="text"     
+                value={ingredientName} 
+                onChange={(e) => setingredientName(e.target.value)} />
             <button 
                 type="submit" 
                 className="btn">
@@ -29,12 +33,12 @@ export default function Form() {
             <div className="ingredient-list">
                 <h4 className="ingredient-title">📋 Lista ingredienti</h4>
                 <ul>
-                    {ingrediants.map((ingrediant, index) => (
+                    {ingredients.map((ingredient, index) => (
                         <li 
                         className="ingredient-css" 
-                        key={index}>
-                            {ingrediant}
-                        </li>
+                        key={index}
+                        onClick={() => removeIngredient(index)}>
+                            {ingredient}</li>
                     ))}
                 </ul>
             </div>
